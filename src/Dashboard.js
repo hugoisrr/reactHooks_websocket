@@ -9,7 +9,8 @@ import Chip from "@material-ui/core/Chip";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 
-import { CTX } from "./Store";
+// import { CTX } from "./Store";
+import ChatContext from "./context/chat/chatContext";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -42,7 +43,9 @@ const Dashboard = () => {
   const classes = useStyles();
 
   // CTX store
-  const { allChats, sendChatAction, user } = React.useContext(CTX);
+  const { allChats, sendChatAction, user } = React.useContext(ChatContext);
+  // const { allChats2, user2 } = React.useContext(ChatContext);
+  // console.log(allChats2, user2);
   const topics = Object.keys(allChats);
 
   // local state

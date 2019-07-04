@@ -2,14 +2,15 @@ import React from "react";
 import "./App.css";
 
 import Dashboard from "./Dashboard";
-import Store from "./Store";
+// import Store from "./Store";
+import ChatState from "./context/chat/ChatState";
 
 function App() {
   return (
     <div className="App">
-      <Store>
+      <ChatState>
         <Dashboard />
-      </Store>
+      </ChatState>
     </div>
   );
 }
